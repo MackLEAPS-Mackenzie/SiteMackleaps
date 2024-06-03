@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./navbar.module.css";
 import React from "react";
 
-export const Navbar = ({ setOpen, open }) => {
+export const Navbar = ({ setOpen, open, items }) => {
   const [position, setPosition] = React.useState(false);
 
   function handleHamburguer() {
@@ -26,25 +26,25 @@ export const Navbar = ({ setOpen, open }) => {
         </div>
         <div className={styles.link_container}>
           <Link href="/projects" className={styles.link}>
-            PROJETOS
+            {items.projetos}
           </Link>
           <Link href="/research" className={styles.link}>
-            PESQUISAS
+            {items.pesquisa}
           </Link>
           <Link href="/news" className={styles.link}>
-            NOTÍCIAS
+            {items.noticias}
           </Link>
           <Link href="/team" className={styles.link}>
-            EQUIPE
+            {items.equipe}
           </Link>
           <Link href="/about" className={styles.link}>
-            SOBRE
+            {items.sobre}
           </Link>
           <Link href="/systems" className={styles.link}>
-            SISTEMAS
+            {items.sistemas}
           </Link>
           <Link href="/contact" className={styles.link}>
-            CONTATO
+            {items.contato}
           </Link>
           <img
             src="/pesquisa.png"
@@ -76,25 +76,25 @@ export const Navbar = ({ setOpen, open }) => {
           />
         </div>
         <Link href="/projects" className={styles.link_hamburguer}>
-          PROJETOS
+          {items.projetos}
         </Link>
         <Link href="/research" className={styles.link_hamburguer}>
-          PESQUISAS
+          {items.pesquisa}
         </Link>
         <Link href="/news" className={styles.link_hamburguer}>
-          NOTÍCIAS
+          {items.noticias}
         </Link>
         <Link href="/team" className={styles.link_hamburguer}>
-          EQUIPE
+          {items.equipe}
         </Link>
         <Link href="/about" className={styles.link_hamburguer}>
-          SOBRE
+          {items.sobre}
         </Link>
         <Link href="/systems" className={styles.link_hamburguer}>
-          SISTEMAS
+          {items.sistemas}
         </Link>
         <Link href="/contact" className={styles.link_hamburguer}>
-          CONTATO
+          {items.contato}
         </Link>
       </div>
     </>

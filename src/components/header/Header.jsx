@@ -3,11 +3,11 @@ import styles from "./Header.module.css";
 import { Navbar } from "../navbar/Navbar";
 import { SearchOverlay } from "../SearchOverlay/SearchOverlay";
 import React from "react";
-export const Header = () => {
+export const Header = ({ items }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <header className={styles.header}>
-      <Navbar setOpen={setIsOpen} open={isOpen} />
+      <Navbar setOpen={setIsOpen} open={isOpen} items={items} />
       {isOpen ? <SearchOverlay setOpen={setIsOpen} open={isOpen} /> : ""}
       <div className={styles.header_img_div}>
         <img

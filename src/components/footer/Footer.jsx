@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
-export const Footer = () => {
+export const Footer = ({ items, headers }) => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.mackleapsContainer}>
@@ -16,31 +16,31 @@ export const Footer = () => {
 
       <div className={styles.bread_crumbs}>
         <div className={styles.link_column}>
-          <h2 className={styles.h2}>PÁGINAS</h2>
+          <h2 className={styles.h2}>{headers.paginas}</h2>
           <Link href="/" className={styles.link}>
             HOME
           </Link>
           <Link href="/projects" className={styles.link}>
-            PROJETOS
+            {items.projetos}
           </Link>
           <Link href="/research" className={styles.link}>
-            PESQUISA
+            {items.pesquisa}
           </Link>
           <Link href="/team" className={styles.link}>
-            EQUIPE
+            {items.equipe}
           </Link>
           <Link href="/news" className={styles.link}>
-            NOTÍCIAS
+            {items.noticias}
           </Link>
           <Link href="/about" className={styles.link}>
-            SOBRE
+            {items.sobre}
           </Link>
           <Link href="/contact" className={styles.link}>
-            CONTATO
+            {items.contato}
           </Link>
         </div>
         <div className={styles.link_column}>
-          <h2 className={styles.h2}>PARCERIAS</h2>
+          <h2 className={styles.h2}>{headers.parcerias}</h2>
           <Link
             href="https://atech.com.br/"
             target="
@@ -50,7 +50,7 @@ export const Footer = () => {
           </Link>
         </div>
         <div className={styles.link_column}>
-          <h2 className={styles.h2}>CONTATOS</h2>
+          <h2 className={styles.h2}>{headers.contato}</h2>
           <Link href="/" className={styles.social_midias}>
             Email
           </Link>
@@ -72,7 +72,7 @@ export const Footer = () => {
           </Link>
         </div>
         <div className={styles.link_column}>
-          <h2 className={styles.h2}>SISTEMAS</h2>
+          <h2 className={styles.h2}>{headers.sistemas}</h2>
           <Link
             href="https://mackleaps.mackenzie.br/oriente"
             target="_blank"

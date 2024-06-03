@@ -4,17 +4,14 @@ import { ProjCard } from "@/components/card_projetos/ProjCard";
 import { getLatestNews, getProjects, getResearch } from "@/services/home";
 import Link from "next/link";
 
-export const ProjetosHome = async ({ json }) => {
+export const ProjetosHome = async ({ json, textContent }) => {
   return (
     <div className={styles.main_container}>
       <div className={styles.projetosHome}>
-        <h2 className={styles.h2}>PROJETOS</h2>
-        <p className={styles.p}>
-          Confira abaixo os principais projetos em desenvolvimento no
-          laboratório
-        </p>
+        <h2 className={styles.h2}>{textContent.projetosTitle}</h2>
+        <p className={styles.p}>{textContent.projetosSubtitle}</p>
         <Link href="/projects" className={styles.link}>
-          <MoreButton />
+          <MoreButton text={textContent.saibaMais} />
         </Link>
       </div>
       <div className={styles.card_container}>

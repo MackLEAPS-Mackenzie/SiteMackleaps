@@ -1,17 +1,17 @@
 import { SystemCard } from "@/components/card_system/SystemCard";
 import styles from "./page.module.css";
-import { getDbSystemsPage } from "@/services/db_queries";
+import { getDictionary } from "@/dictionary";
 
-export default async function Page() {
-  const systemsPage = await getDbSystemsPage();
+export default async function Page({ params }) {
+  const lang = await getDictionary(params.lang);
   return (
     <main className={styles.main}>
       <div className={styles.text}>
-        <h1 className={styles.h1}>Sistemas</h1>
-        <p className={styles.p}>Conheça e acesse nossos sistemas</p>
+        <h1 className={styles.h1}>{lang.systems.title}</h1>
+        <p className={styles.p}>{lang.systems.subtitle}</p>
       </div>
       <section className={styles.card_div}>
-        {systemsPage.map((elem, index) => {
+        {lang.systems.sistemas.map((elem, index) => {
           return (
             <SystemCard
               title={elem.title}

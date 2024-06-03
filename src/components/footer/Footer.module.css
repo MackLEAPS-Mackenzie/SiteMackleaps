@@ -52,6 +52,7 @@
 }
 .h2 {
   color: #ffff;
+  text-transform: uppercase;
   font-size: 15px;
 }
 /* Map and Addres */

@@ -6,7 +6,7 @@ import { PesquisaCard } from "../pesquisa_card/PesquisaCars";
 import React from "react";
 import Link from "next/link";
 
-export const PesquisaHome = ({ json }) => {
+export const PesquisaHome = ({ json, textContent }) => {
   let currentCardIndex = 0;
   const [currentCard, setCurrentCard] = React.useState(json[0]);
 
@@ -25,13 +25,10 @@ export const PesquisaHome = ({ json }) => {
   return (
     <div className={styles.main_container}>
       <div className={styles.text}>
-        <h2 className={styles.h2}>PESQUISAS</h2>
-        <p className={styles.p}>
-          Ao lado é possível ver algumas das pesquisas realizadas em nosso
-          laboratório, aperte em saiba mais para obter mais informações.
-        </p>
+        <h2 className={styles.h2}>{textContent.pesquisa}</h2>
+        <p className={styles.p}>{textContent.pesquisaSubtext}</p>
         <Link href="/research" className={styles.link}>
-          <MoreButton />
+          <MoreButton text={textContent.saibaMais} />
         </Link>
       </div>
       <div className={styles.content_container}>
