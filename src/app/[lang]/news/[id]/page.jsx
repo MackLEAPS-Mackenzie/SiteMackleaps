@@ -2,6 +2,7 @@ import { getNews } from "@/services/topics";
 import styles from "./page.module.css";
 import { Relacionados } from "@/components/relacionados/Relacionados";
 import { getDbNews } from "@/services/db_queries";
+import { getDictionary } from "@/dictionary";
 
 async function getData(id) {
   const news = await getDbNews();

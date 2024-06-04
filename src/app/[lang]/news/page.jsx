@@ -1,20 +1,24 @@
 import { PageTitle } from "@/components/title_search/PageTitle";
 import styles from "./page.module.css";
 import { NewsCard } from "@/components/news_card/NewsCard";
-import { getDbNews } from "@/services/db_queries";
+import { getDictionary } from "@/dictionary";
 
 // function waitFor(ms) {
 //   return new Promise((resolve) => setTimeout(() => resolve(), ms));
 // }
 
-export default async function Page() {
+export default async function Page({ params }) {
   //await waitFor(5000);
-  const news = await getDbNews();
+  const lang = await getDictionary(params.lang);
   return (
     <main className={styles.main}>
-      <PageTitle title="notícias" subtitle="últimas notícias" />
+      <PageTitle
+        title={lang.news.title}
+        subtitle={lang.news.subtitle}
+        textSearch={lang.news.buscar}
+      />
       <section className={styles.card_div}>
-        {news.map((elem, index) => {
+        {lang.news.noticias.map((elem, index) => {
           return (
             <NewsCard
               img={elem.img}
@@ -23,6 +27,7 @@ export default async function Page() {
               description={elem.description}
               key={index}
               link={`/news/${elem.id}`}
+              textButton={lang.news.leiaMais}
             />
           );
         })}

@@ -1,12 +1,19 @@
 import styles from "./CardMobile.module.css";
 
-export const CardMobile = () => {
+export const CardMobile = ({
+  title,
+  subtitle,
+  name,
+  email,
+  message,
+  submitButton,
+}) => {
   return (
     <div className={styles.main}>
       <div className={styles.cardForm}>
         <div className={styles.text}>
-          <h1 className={styles.h1}>Entre em contato conosco</h1>
-          <p className={styles.p}>Como podemos te ajudar?</p>
+          <h1 className={styles.h1}>{title}</h1>
+          <p className={styles.p}>{subtitle}</p>
         </div>
         <form className={styles.form}>
           <div>
@@ -15,7 +22,7 @@ export const CardMobile = () => {
               type="text"
               id="nome"
               name="nome"
-              placeholder="Insira seu nome"
+              placeholder={name}
               className={styles.input}
             />
           </div>
@@ -26,7 +33,7 @@ export const CardMobile = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="Insira seu endereço de e-mail"
+              placeholder={email}
               className={styles.input}
             />
           </div>
@@ -39,14 +46,14 @@ export const CardMobile = () => {
               id="question"
               cols="30"
               rows="10"
-              placeholder="Escreva a sua mensagem"
+              placeholder={message}
             ></textarea>
           </div>
           <br></br>
           <div className={styles.divButton}>
             <div className={styles.divButton}>
               <button type="submit" className={styles.button}>
-                Envie
+                {submitButton}
               </button>
             </div>
           </div>

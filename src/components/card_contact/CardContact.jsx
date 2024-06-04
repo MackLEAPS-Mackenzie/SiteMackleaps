@@ -1,11 +1,18 @@
 import styles from "./CardContact.module.css";
 
-export const CardContact = () => {
+export const CardContact = ({
+  title,
+  subtitle,
+  submitButton,
+  name,
+  email,
+  message,
+}) => {
   return (
     <div className={styles.main}>
       <div className={styles.left}>
-        <h1 className={styles.h1}>Entre em contato conosco</h1>
-        <p className={styles.p}>Como podemos te ajudar?</p>
+        <h1 className={styles.h1}>{title}</h1>
+        <p className={styles.p}>{subtitle}</p>
         <form className={styles.form}>
           <div>
             <label htmlFor="nome" className={styles.label}></label>
@@ -13,7 +20,7 @@ export const CardContact = () => {
               type="text"
               id="nome"
               name="nome"
-              placeholder="Insira seu nome"
+              placeholder={name}
               className={styles.input}
             />
           </div>
@@ -24,7 +31,7 @@ export const CardContact = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="Insira seu endereço de e-mail"
+              placeholder={email}
               className={styles.input}
             />
           </div>
@@ -37,12 +44,12 @@ export const CardContact = () => {
               id="question"
               cols="30"
               rows="10"
-              placeholder="Escreva a sua mensagem"
+              placeholder={message}
             ></textarea>
           </div>
           <br></br>
           <button type="submit" className={styles.button}>
-            Envie
+            {submitButton}
           </button>
           <br></br>
         </form>

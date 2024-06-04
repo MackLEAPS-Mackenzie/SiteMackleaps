@@ -24,6 +24,10 @@
   padding: 10px;
 }
 
+.input::placeholder {
+  text-transform: uppercase;
+}
+
 .search_btn {
   position: relative;
   right: 50px;
