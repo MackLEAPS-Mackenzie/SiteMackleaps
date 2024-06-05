@@ -1030,5 +1030,32 @@
     "email": "Enter your e-mail address",
     "message": "Have a question?",
     "submitButton": "Submit"
+  },
+
+  "relacionados": {
+    "title": "Read More",
+    "related": [
+      {
+        "img": "/cloud.jpeg",
+        "title": "Weather Station",
+        "description": "Application that communicates with a weather station and its sensors, collecting and manipulating real-time weather data."
+      },
+      {
+        "img": "/minimalist_setup.jpeg",
+        "title": "Mackleaps Website",
+        "description": "Aims to disseminate research and projects related to technology and recruit potential members and partners."
+      },
+      {
+        "img": "/camera.jpeg",
+        "title": "People Counter",
+        "description": "Aims to count the number of people entering buildings on the Higienópolis campus of Mackenzie University."
+      }
+    ]
+  },
+
+  "idioma": {
+    "title": "Select the Language",
+    "portuguese": "Portuguese",
+    "english": "English"
   }
 }

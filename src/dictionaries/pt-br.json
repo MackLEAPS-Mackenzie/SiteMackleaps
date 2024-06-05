@@ -1034,5 +1034,32 @@
     "email": "Insira seu endereço de e-mail",
     "message": "Escreva a sua mensagem",
     "submitButton": "Envie"
+  },
+
+  "relacionados": {
+    "title": "Textos relacionados",
+    "related": [
+      {
+        "img": "/cloud.jpeg",
+        "title": "Estação Meteorológica",
+        "description": "Aplicação que se comunica a uma estação meteorológica e seus sensores, coletando e manipulando dados climáticos em tempo real."
+      },
+      {
+        "img": "/minimalist_setup.jpeg",
+        "title": "Site Mackleaps",
+        "description": "Tem como escopo divulgar pesquisas e projetos relacionados à tecnologia e recrutar potenciais membros e parceiros."
+      },
+      {
+        "img": "/camera.jpeg",
+        "title": "Contador de Gente",
+        "description": "Tem como objetivo a contagem do número de pessoas que entram nos prédios do campus universitário Higienópolis da Mackenzie."
+      }
+    ]
+  },
+
+  "idioma": {
+    "title": "Selecione o idioma",
+    "portuguese": "Português",
+    "english": "Inglês"
   }
 }

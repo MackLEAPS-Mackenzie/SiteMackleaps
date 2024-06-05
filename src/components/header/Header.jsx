@@ -2,13 +2,22 @@
 import styles from "./Header.module.css";
 import { Navbar } from "../navbar/Navbar";
 import { SearchOverlay } from "../SearchOverlay/SearchOverlay";
+import { LenguageOverlay } from "../lenguageOverlay/LenguageOverlay";
 import React from "react";
-export const Header = ({ items }) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+
+export const Header = ({ items, lang }) => {
+  const [isOpen, setIsOpen] = React.useState(0);
+
   return (
     <header className={styles.header}>
-      <Navbar setOpen={setIsOpen} open={isOpen} items={items} />
-      {isOpen ? <SearchOverlay setOpen={setIsOpen} open={isOpen} /> : ""}
+      <Navbar setOpen={setIsOpen} open={isOpen} items={items} lang={lang} />
+      {isOpen === 1 ? (
+        <SearchOverlay setOpen={setIsOpen} open={isOpen} />
+      ) : isOpen === 2 ? (
+        <LenguageOverlay setOpen={setIsOpen} open={isOpen} />
+      ) : (
+        ""
+      )}
       <div className={styles.header_img_div}>
         <img
           src="/titulo-mackleaps.png"

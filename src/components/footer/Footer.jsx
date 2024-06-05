@@ -1,14 +1,14 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
-export const Footer = ({ items, headers }) => {
+export const Footer = ({ items, headers, lang }) => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.mackleapsContainer}>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <Link href="/" className={styles.link}>
+          <Link href={lang === "en" ? "/en" : "/pt"} className={styles.link}>
             <img src="/logo-mackleaps.png" alt="logo-mackleaps" />
           </Link>
-          <Link href="/" className={styles.link}>
+          <Link href={lang === "en" ? "/en" : "/pt"} className={styles.link}>
             <h2>MACKLEAPS</h2>
           </Link>
         </div>
@@ -17,25 +17,43 @@ export const Footer = ({ items, headers }) => {
       <div className={styles.bread_crumbs}>
         <div className={styles.link_column}>
           <h2 className={styles.h2}>{headers.paginas}</h2>
-          <Link href="/" className={styles.link}>
+          <Link href={lang === "en" ? "/en" : "/pt"} className={styles.link}>
             HOME
           </Link>
-          <Link href="/projects" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/projects" : "/pt/projects"}
+            className={styles.link}
+          >
             {items.projetos}
           </Link>
-          <Link href="/research" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/research" : "/pt/research"}
+            className={styles.link}
+          >
             {items.pesquisa}
           </Link>
-          <Link href="/team" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/team" : "/pt/team"}
+            className={styles.link}
+          >
             {items.equipe}
           </Link>
-          <Link href="/news" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/news" : "/pt/news"}
+            className={styles.link}
+          >
             {items.noticias}
           </Link>
-          <Link href="/about" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/about" : "/pt/about"}
+            className={styles.link}
+          >
             {items.sobre}
           </Link>
-          <Link href="/contact" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/contact" : "/pt/contact"}
+            className={styles.link}
+          >
             {items.contato}
           </Link>
         </div>

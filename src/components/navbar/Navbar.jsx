@@ -3,20 +3,18 @@ import Link from "next/link";
 import styles from "./navbar.module.css";
 import React from "react";
 
-export const Navbar = ({ setOpen, open, items }) => {
+export const Navbar = ({ setOpen, open, items, lang }) => {
   const [position, setPosition] = React.useState(false);
 
   function handleHamburguer() {
     setPosition(!position);
   }
-  function handleSearch() {
-    setOpen(!open);
-  }
+
   return (
     <>
       <div className={styles.mainContainer}>
         <div className={styles.logoContainer}>
-          <Link href="/" className={styles.link}>
+          <Link href={lang === "en" ? "/en" : "/pt"} className={styles.link}>
             <img
               src="/logo-mackleaps.png"
               alt="logo-mackleaps"
@@ -25,32 +23,59 @@ export const Navbar = ({ setOpen, open, items }) => {
           </Link>
         </div>
         <div className={styles.link_container}>
-          <Link href="/projects" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/projects" : "/pt/projects"}
+            className={styles.link}
+          >
             {items.projetos}
           </Link>
-          <Link href="/research" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/research" : "/pt/research"}
+            className={styles.link}
+          >
             {items.pesquisa}
           </Link>
-          <Link href="/news" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/news" : "/pt/news"}
+            className={styles.link}
+          >
             {items.noticias}
           </Link>
-          <Link href="/team" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/team" : "/pt/team"}
+            className={styles.link}
+          >
             {items.equipe}
           </Link>
-          <Link href="/about" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/about" : "/pt/about"}
+            className={styles.link}
+          >
             {items.sobre}
           </Link>
-          <Link href="/systems" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/systems" : "/pt/systems"}
+            className={styles.link}
+          >
             {items.sistemas}
           </Link>
-          <Link href="/contact" className={styles.link}>
+          <Link
+            href={lang === "en" ? "/en/contact" : "/pt/contact"}
+            className={styles.link}
+          >
             {items.contato}
           </Link>
+          <img
+            src="/idioma.svg"
+            alt="Idioma"
+            className={styles.idioma}
+            onClick={() => setOpen(open === 2 ? 0 : 2)}
+          />
           <img
             src="/pesquisa.png"
             alt="pesquisar"
             className={styles.search_button}
-            onClick={() => handleSearch()}
+            onClick={() => setOpen(open === 1 ? 0 : 1)}
           />
         </div>
         <img
@@ -62,12 +87,7 @@ export const Navbar = ({ setOpen, open, items }) => {
       </div>
       <div className={position ? styles.hamburguer_menu : styles.closed}>
         <div className={styles.icons_Hamburguer}>
-          <img
-            src="/pesquisa.png"
-            alt="pesquisar"
-            className={styles.search_button}
-            onClick={() => handleSearch()}
-          />
+          <img src="/idioma.svg" alt="Idioma" className={styles.idioma} />
           <img
             src="/close.png"
             alt="fechar"
@@ -75,25 +95,46 @@ export const Navbar = ({ setOpen, open, items }) => {
             onClick={() => handleHamburguer()}
           />
         </div>
-        <Link href="/projects" className={styles.link_hamburguer}>
+        <Link
+          href={lang === "en" ? "/en/projects" : "/pt/projects"}
+          className={styles.link_hamburguer}
+        >
           {items.projetos}
         </Link>
-        <Link href="/research" className={styles.link_hamburguer}>
+        <Link
+          href={lang === "en" ? "/en/research" : "/pt/research"}
+          className={styles.link_hamburguer}
+        >
           {items.pesquisa}
         </Link>
-        <Link href="/news" className={styles.link_hamburguer}>
+        <Link
+          href={lang === "en" ? "/en/news" : "/pt/news"}
+          className={styles.link_hamburguer}
+        >
           {items.noticias}
         </Link>
-        <Link href="/team" className={styles.link_hamburguer}>
+        <Link
+          href={lang === "en" ? "/en/team" : "/pt/team"}
+          className={styles.link_hamburguer}
+        >
           {items.equipe}
         </Link>
-        <Link href="/about" className={styles.link_hamburguer}>
+        <Link
+          href={lang === "en" ? "/en/about" : "/pt/about"}
+          className={styles.link_hamburguer}
+        >
           {items.sobre}
         </Link>
-        <Link href="/systems" className={styles.link_hamburguer}>
+        <Link
+          href={lang === "en" ? "/en/systems" : "/pt/systems"}
+          className={styles.link_hamburguer}
+        >
           {items.sistemas}
         </Link>
-        <Link href="/contact" className={styles.link_hamburguer}>
+        <Link
+          href={lang === "en" ? "/en/contact" : "/pt/contact"}
+          className={styles.link_hamburguer}
+        >
           {items.contato}
         </Link>
       </div>

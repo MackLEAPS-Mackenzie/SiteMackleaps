@@ -18,13 +18,13 @@ export default async function RootLayout({ children, params }) {
   const lang = await getDictionary(params.lang);
 
   return (
-    <html lang="pt-br">
+    <html lang={params.lang}>
       <body className={outfit.className}>
-        <Header items={lang.nav} />
+        <Header items={lang.nav} lang={params.lang} />
         <Divider />
         {children}
         <footer>
-          <Footer items={lang.nav} headers={lang.footer} />
+          <Footer items={lang.nav} headers={lang.footer} lang={params.lang} />
         </footer>
       </body>
     </html>

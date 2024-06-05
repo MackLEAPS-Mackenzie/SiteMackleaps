@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./search.module.css";
+
 export const SearchOverlay = ({ setOpen, open }) => {
   function handleHamburguer() {
     setOpen(!open);

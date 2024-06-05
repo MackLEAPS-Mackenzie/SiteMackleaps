@@ -1,8 +1,9 @@
-const dictionaries = {
-  en: () => import("./dictionaries/en.json").then((r) => r.default),
-  "pt-br": () => import("./dictionaries/pt-br.json").then((r) => r.default),
-};
+import pt from "./dictionaries/pt-br.json";
+import en from "./dictionaries/en.json";
 
-export const getDictionary = (lang) => {
-  return dictionaries[lang]();
+export const getDictionary = async (lang) => {
+  if (lang === "en") {
+    return en;
+  }
+  return pt;
 };

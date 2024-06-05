@@ -21,7 +21,11 @@ export default async function Page({ params }) {
               title={elem.title}
               description={elem.description}
               key={index}
-              link={`projects/${elem.id}`}
+              link={
+                params.lang === "en"
+                  ? `/en/projects/${elem.id}`
+                  : `/pt/projects/${elem.id}`
+              }
               textButton={lang.news.leiaMais}
             />
           );
