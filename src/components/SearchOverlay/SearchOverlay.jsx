@@ -3,7 +3,8 @@ import Link from "next/link";
 import React from "react";
 import styles from "./search.module.css";
 
-export const SearchOverlay = ({ setOpen, open }) => {
+export const SearchOverlay = ({ setOpen, open, items, lang }) => {
+  const titulo = lang === "pt" ? "Estou buscando por..." : "I'm looking for";
   function handleHamburguer() {
     setOpen(!open);
   }
@@ -19,22 +20,26 @@ export const SearchOverlay = ({ setOpen, open }) => {
             className={styles.close_button}
           />
         </div>
-        <h1 className={styles.h1}>Estou Buscando Por...</h1>
+        <h1 className={styles.h1}>{titulo}</h1>
 
         <div className={styles.buttons_div}>
           <Link href="/projects">
-            <button className={styles.button}>Projetos</button>
+            <button className={styles.button}>{items.projetos}</button>
           </Link>
           <Link href="/research">
-            <button className={styles.button}>Pesquisas</button>
+            <button className={styles.button}>{items.pesquisa}</button>
           </Link>
           <Link href="/news">
-            <button className={styles.button}>Notícias</button>
+            <button className={styles.button}>{items.noticias}</button>
           </Link>
         </div>
         <div className={styles.search_div}>
-          <input type="text" placeholder="BUSQUE" className={styles.input} />
-          <img src="/search.svg" alt="search" className={styles.search_btn} />
+          <input
+            type="text"
+            placeholder={lang === "pt" ? "BUSQUE" : "SEARCH"}
+            className={styles.input}
+          />
+          <img src="./search.svg" alt="search" className={styles.search_btn} />
         </div>
       </div>
     </div>

@@ -12,9 +12,14 @@ export const Header = ({ items, lang }) => {
     <header className={styles.header}>
       <Navbar setOpen={setIsOpen} open={isOpen} items={items} lang={lang} />
       {isOpen === 1 ? (
-        <SearchOverlay setOpen={setIsOpen} open={isOpen} />
+        <SearchOverlay
+          setOpen={setIsOpen}
+          open={isOpen}
+          items={items}
+          lang={lang}
+        />
       ) : isOpen === 2 ? (
-        <LenguageOverlay setOpen={setIsOpen} open={isOpen} />
+        <LenguageOverlay setOpen={setIsOpen} open={isOpen} lang={lang}/>
       ) : (
         ""
       )}

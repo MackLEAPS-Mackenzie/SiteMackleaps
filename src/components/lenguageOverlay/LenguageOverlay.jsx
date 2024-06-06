@@ -3,13 +3,11 @@ import Link from "next/link";
 import React from "react";
 import styles from "./LenguageOverlay.module.css";
 
-export const LenguageOverlay = ({
-  title,
-  portuguese,
-  english,
-  setOpen,
-  open,
-}) => {
+export const LenguageOverlay = ({ setOpen, open, lang }) => {
+  const titulo = lang === "pt" ? "Selecione o idioma" : "Select language";
+  const pt = lang === "pt" ? "Português" : "Portuguese";
+  const en = lang === "pt" ? "Inglês" : "English";
+
   function handleHamburguer() {
     setOpen(!open);
   }
@@ -25,14 +23,14 @@ export const LenguageOverlay = ({
             className={styles.close_button}
           />
         </div>
-        <h1 className={styles.h1}>Selecione o idioma</h1>
+        <h1 className={styles.h1}>{titulo}</h1>
 
         <div className={styles.buttons_div}>
           <Link href="/pt">
-            <button className={styles.button}>Português</button>
+            <button className={styles.button}>{pt}</button>
           </Link>
           <Link href="/en">
-            <button className={styles.button}>Inglês</button>
+            <button className={styles.button}>{en}</button>
           </Link>
         </div>
       </div>
