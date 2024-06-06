@@ -680,6 +680,18 @@
         "date": "20 Mai. 2024",
         "author": "Administrador",
         "author_img": "/author.jpeg",
+        "title": "Lançamento - Livros 2024",
+        "description": "Esta notícia promove a divulgação dos mais novos livros lançados no dia 29/05/2024 com autoria de alguns professores da FCI.",
+        "body": {
+          "__html": "<p>Esta notícia promove a divulgação dos mais novos livros lançados com autoria de alguns professores da FCI. A <b>O lançamento ocorreu no dia 27 de maio de 2024 juntamente com a Editora Mackenzie</b> e o <b>Programa de Pós-Graduação em Computação Aplicada. </b>Seguem abaixo os respectivos lançamentos:</p><br><p><b>1 - Introdução às séries temporais</b> - Uma abordagem prática em Python.</p><p><b>Autores:</b> Rogério de Oliveira, Orlando Yesid Esparza Albarracin e Gustavo Rocha da Silva.</p><p><b>Editora:</b> Editora Mackenzie</p><br><p><b>2 - Introdução à ciência de dados e sistemas interativos: </b> Uma abordagem aplicada</p><p><b>Autores: </b>Ana Grasielle Dionísio Corrêa, Arnaldo Rabello de Aguiar Vallim Filho, Maria Amelia Eliseo, Valéria</p><p><b>Editora:</b> LF Editorial</p><br><p><b>3 - Análise e modelagem estatística para iniciantes: </b>Aplicações em R</p><p><b>Autor: </b>Arnaldo Rabello Aguiar Vallim Filho</p><p><b>Editora: </b>LF Editorial</p><br><img src='/livros.jpg' alt='Livros'>"
+        }
+      },
+      {
+        "id": "2",
+        "img": "/code.jpeg",
+        "date": "20 Mai. 2024",
+        "author": "Administrador",
+        "author_img": "/author.jpeg",
         "title": "Inscrições encerradas - Iniciação Científica",
         "description": "",
         "body": {
@@ -687,7 +699,7 @@
         }
       },
       {
-        "id": "2",
+        "id": "3",
         "img": "/code.jpeg",
         "date": "13 Mar. 2024",
         "author": "Administrador",
@@ -699,7 +711,7 @@
         }
       },
       {
-        "id": "3",
+        "id": "4",
         "img": "/code.jpeg",
         "date": "20 Mai. 2024",
         "author": "Administrador",
@@ -711,7 +723,7 @@
         }
       },
       {
-        "id": "4",
+        "id": "5",
         "img": "/code.jpeg",
         "date": "13 Mar. 2024",
         "author": "Administrador",
@@ -723,7 +735,7 @@
         }
       },
       {
-        "id": "5",
+        "id": "6",
         "img": "/code.jpeg",
         "date": "29 Fev. 2024",
         "author": "Administrador",
@@ -735,7 +747,7 @@
         }
       },
       {
-        "id": "6",
+        "id": "7",
         "img": "/code.jpeg",
         "date": "19 Fev. 2024",
         "author": "Administrador",
@@ -747,7 +759,7 @@
         }
       },
       {
-        "id": "7",
+        "id": "8",
         "img": "/code.jpeg",
         "date": "19 Fev. 2024",
         "author": "Administrador",
@@ -1055,11 +1067,5 @@
         "description": "Tem como objetivo a contagem do número de pessoas que entram nos prédios do campus universitário Higienópolis da Mackenzie."
       }
     ]
-  },
-
-  "idioma": {
-    "title": "Selecione o idioma",
-    "portuguese": "Português",
-    "english": "Inglês"
   }
 }

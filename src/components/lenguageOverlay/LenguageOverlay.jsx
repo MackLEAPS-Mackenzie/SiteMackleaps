@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./LenguageOverlay.module.css";
 
 export const LenguageOverlay = ({ setOpen, open, lang }) => {
-  const titulo = lang === "pt" ? "Selecione o idioma" : "Select language";
+  const titulo = lang === "pt" ? "Selecione o idioma" : "Select the language";
   const pt = lang === "pt" ? "Português" : "Portuguese";
   const en = lang === "pt" ? "Inglês" : "English";
 

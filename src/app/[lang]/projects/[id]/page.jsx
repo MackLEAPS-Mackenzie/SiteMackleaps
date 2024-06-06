@@ -23,7 +23,6 @@ export default async function Page({ params }) {
         </section>
         <section className={styles.text_body}>{projeto.body}</section>
       </main>
-      z
       <Relacionados
         title={lang.relacionados.title}
         articles={lang.relacionados.related}

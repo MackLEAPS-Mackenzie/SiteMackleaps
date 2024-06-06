@@ -673,6 +673,18 @@
       {
         "id": "1",
         "img": "/code.jpeg",
+        "date": "20 Mai. 2024",
+        "author": "Administrador",
+        "author_img": "/author.jpeg",
+        "title": "Book Release 2024",
+        "description": "This news promotes the release of the latest books launched on May 27, 2024, authored by some professors from FCI.",
+        "body": {
+          "__html": "<p>This news promotes the release of the latest books authored by some professors from FCI. <b>The launch took place on May 27, 2024, in collaboration with Editora Mackenzie</b> and the <b>Graduate Program in Applied Computing.</b> Below are the respective releases:</p><br><p><b>1 - Introduction to Time Series:</b> A Practical Approach in Python.</p><p><b>Authors:</b> Rogério de Oliveira, Orlando Yesid Esparza Albarracin, and Gustavo Rocha da Silva.</p><p><b>Publisher:</b> Editora Mackenzie</p><br><p><b>2 - Introduction to Data Science and Interactive Systems:</b> An Applied Approach.</p><p><b>Authors:</b> Ana Grasielle Dionísio Corrêa, Arnaldo Rabello de Aguiar Vallim Filho, Maria Amelia Eliseo, Valéria</p><p><b>Publisher:</b> LF Editorial</p><br><p><b>3 - Statistical Analysis and Modeling for Beginners:</b> Applications in R.</p><p><b>Author:</b> Arnaldo Rabello Aguiar Vallim Filho</p><p><b>Publisher:</b> LF Editorial</p><br><img src='/livros.jpg' alt='Livros'>"
+        }
+      },
+      {
+        "id": "2",
+        "img": "/code.jpeg",
         "date": "May 20, 2024",
         "author": "Administrator",
         "author_img": "/author.jpeg",
@@ -683,7 +695,7 @@
         }
       },
       {
-        "id": "2",
+        "id": "3",
         "img": "/code.jpeg",
         "date": "March 13, 2024",
         "author": "Administrator",
@@ -695,7 +707,7 @@
         }
       },
       {
-        "id": "3",
+        "id": "4",
         "img": "/code.jpeg",
         "date": "May 20, 2024",
         "author": "Administrator",
@@ -707,7 +719,7 @@
         }
       },
       {
-        "id": "4",
+        "id": "5",
         "img": "/code.jpeg",
         "date": "March 13, 2024",
         "author": "Administrator",
@@ -719,7 +731,7 @@
         }
       },
       {
-        "id": "5",
+        "id": "6",
         "img": "/code.jpeg",
         "date": "February 29, 2024",
         "author": "Administrator",
@@ -731,7 +743,7 @@
         }
       },
       {
-        "id": "6",
+        "id": "7",
         "img": "/code.jpeg",
         "date": "February 19, 2024",
         "author": "Administrator",
@@ -743,7 +755,7 @@
         }
       },
       {
-        "id": "7",
+        "id": "8",
         "img": "/code.jpeg",
         "date": "February 19, 2024",
         "author": "Administrator",
@@ -1051,11 +1063,5 @@
         "description": "Aims to count the number of people entering buildings on the Higienópolis campus of Mackenzie University."
       }
     ]
-  },
-
-  "idioma": {
-    "title": "Select the Language",
-    "portuguese": "Portuguese",
-    "english": "English"
   }
 }

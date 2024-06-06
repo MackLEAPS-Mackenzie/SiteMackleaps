@@ -39,7 +39,7 @@ export const SearchOverlay = ({ setOpen, open, items, lang }) => {
             placeholder={lang === "pt" ? "BUSQUE" : "SEARCH"}
             className={styles.input}
           />
-          <img src="./search.svg" alt="search" className={styles.search_btn} />
+          <img src="/search.svg" alt="search" className={styles.search_btn} />
         </div>
       </div>
     </div>

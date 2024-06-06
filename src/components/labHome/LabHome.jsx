@@ -22,6 +22,7 @@ export const LabHome = ({ json, textContent }) => {
             date={news.date}
             key={index}
             link="/news"
+            textButton="Leia mais"
           />
         ))}
       </div>
