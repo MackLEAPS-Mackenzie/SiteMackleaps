@@ -14,6 +14,7 @@ import {
 export default async function Home({ params }) {
   const lang = await getDictionary(params.lang);
   const latest_news = await getDbLatestNews();
+
   return (
     <>
       <main className={styles.main}>
