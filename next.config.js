@@ -3,5 +3,8 @@
 //     basePath: "/mackleaps",
 //     assetPrefix: "http://localhost/mackleaps",
 //   };
-const nextConfig = {};
-module.exports = nextConfig;
+module.exports = {
+  env: {
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+  },
+};
