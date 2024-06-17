@@ -4,7 +4,7 @@ const montserrat = Montserrat({
   weight: ["500", "600", "700", "800", "400"],
   subsets: ["latin"],
 });
-//teste
+
 export const metadata = {
   title: "Mackleaps",
   description: "Site Mackleaps",
