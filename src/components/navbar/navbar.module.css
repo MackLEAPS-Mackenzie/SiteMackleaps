@@ -42,7 +42,11 @@
 }
 
 .lenguageLink {
-  border: 1px;
+  width: 10%;
+}
+
+.lenguageLinkColor {
+  cursor: default;
   width: 10%;
 }
 
@@ -54,6 +58,11 @@
 .idioma:hover {
   transform: scale(1.2);
   transition: 300ms;
+}
+
+.idiomaColor {
+  width: 30px;
+  opacity: 0.5;
 }
 
 .hamburguer {

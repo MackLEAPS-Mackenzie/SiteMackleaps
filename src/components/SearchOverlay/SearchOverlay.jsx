@@ -4,7 +4,6 @@ import React from "react";
 import styles from "./search.module.css";
 
 export const SearchOverlay = ({ setOpen, open, items, lang }) => {
-  const titulo = lang === "en" ? "I'm looking for" : "Estou Buscando Por...";
   function handleHamburguer() {
     setOpen(!open);
   }
@@ -20,16 +19,18 @@ export const SearchOverlay = ({ setOpen, open, items, lang }) => {
             className={styles.close_button}
           />
         </div>
-        <h1 className={styles.h1}>{titulo}</h1>
+        <h1 className={styles.h1}>
+          {lang === "en" ? "I'm Looking For..." : "Estou Buscando Por..."}
+        </h1>
 
         <div className={styles.buttons_div}>
-          <Link href="/projects">
+          <Link href={lang === "en" ? "en/projects" : "/pt-br/projects"}>
             <button className={styles.button}>{items.projetos}</button>
           </Link>
-          <Link href="/research">
+          <Link href={lang === "en" ? "en/research" : "pt-br/research"}>
             <button className={styles.button}>{items.pesquisa}</button>
           </Link>
-          <Link href="/news">
+          <Link href={lang === "en" ? "en/news" : "/pt-br/news"}>
             <button className={styles.button}>{items.noticias}</button>
           </Link>
         </div>

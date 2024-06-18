@@ -151,10 +151,10 @@ export const Footer = ({ items, headers, lang }) => {
           <img src="/map.png" alt="mapa" className={styles.image_address} />
         </Link>
         <p className={styles.address}>
-          Endereço R. da Consolação, 930 - Consolação, São Paulo - SP - ( Prédio
-          45 - Subsolo 2 )
+          Endereço: R. da Consolação, 930 - Consolação, São Paulo - SP - (
+          Prédio 45 - Subsolo 2 )
         </p>
-        <p className={styles.address}>Telefone (11)2766-7764</p>
+        <p className={styles.address}>Telefone: (11) 2766-7764</p>
       </div>
     </div>
   );
