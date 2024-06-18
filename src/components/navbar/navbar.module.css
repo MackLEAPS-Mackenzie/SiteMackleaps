@@ -41,7 +41,13 @@
   transition: 300ms;
 }
 
+.lenguageLink {
+  border: 1px;
+  width: 10%;
+}
+
 .idioma {
+  width: 30px;
   cursor: pointer;
 }
 

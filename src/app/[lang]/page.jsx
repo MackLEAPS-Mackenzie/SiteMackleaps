@@ -17,16 +17,22 @@ export default async function Home({ params }) {
   return (
     <>
       <main className={styles.main}>
-        <LabHome json={latest_news} textContent={lang.home.labSection} />
+        <LabHome
+          json={latest_news}
+          textContent={lang.home.labSection}
+          lang={params.lang}
+        />
         <ProjetosHome
           json={lang.home.projectSession.projetosHome}
           textContent={lang.home.projectSession}
+          lang={params.lang}
         />
         <PesquisaHome
           json={lang.home.pesquisaSection.pesquisaHome}
           textContent={lang.home.pesquisaSection}
+          lang={params.lang}
         />
-        <Card textContent={lang.home} />
+        <Card textContent={lang.home} lang={params.lang} />
       </main>
     </>
   );

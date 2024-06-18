@@ -6,7 +6,7 @@ import { PesquisaCard } from "../pesquisa_card/PesquisaCars";
 import React from "react";
 import Link from "next/link";
 
-export const PesquisaHome = ({ json, textContent }) => {
+export const PesquisaHome = ({ json, textContent, lang }) => {
   let currentCardIndex = 0;
   const [currentCard, setCurrentCard] = React.useState(json[0]);
 
@@ -27,7 +27,10 @@ export const PesquisaHome = ({ json, textContent }) => {
       <div className={styles.text}>
         <h2 className={styles.h2}>{textContent.pesquisa}</h2>
         <p className={styles.p}>{textContent.pesquisaSubtext}</p>
-        <Link href="/research" className={styles.link}>
+        <Link
+          href={lang === "en" ? "/en/research" : "pt-br/research"}
+          className={styles.link}
+        >
           <MoreButton text={textContent.saibaMais} />
         </Link>
       </div>

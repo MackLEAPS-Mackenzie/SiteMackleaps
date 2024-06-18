@@ -3,13 +3,16 @@ import { MoreButton } from "@/components/moreButton/MoreButton";
 import { NewsCard } from "../news_card/NewsCard";
 import Link from "next/link";
 
-export const LabHome = ({ json, textContent }) => {
+export const LabHome = ({ json, textContent, lang }) => {
   return (
     <div className={styles.labHome}>
       <div className={styles.text_container}>
         <h2 className={styles.h2}> {textContent.topTitle}</h2>
         <p className={styles.textMackleaps}>{textContent.topSubtitle}</p>
-        <Link href="/about" className={styles.link}>
+        <Link
+          href={lang === "en" ? "/en/about" : "/pt-br/about"}
+          className={styles.link}
+        >
           <MoreButton text={textContent.saibaMais} />
         </Link>
       </div>
@@ -21,8 +24,8 @@ export const LabHome = ({ json, textContent }) => {
             description={news.description}
             date={news.date}
             key={index}
-            link="/news"
-            textButton="Leia mais"
+            link={lang === "en" ? "/en/news" : "/pt-br/news"}
+            textButton={lang === "en" ? "Read More" : "Leia Mais"}
           />
         ))}
       </div>

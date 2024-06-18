@@ -65,12 +65,18 @@ export const Navbar = ({ setOpen, open, items, lang }) => {
           >
             {items.contato}
           </Link>
-          <img
+          <Link href="/pt-br" className={styles.lenguageLink}>
+            <img src="/brasil.png" alt="Português" className={styles.idioma} />
+          </Link>
+          <Link href="/en" className={styles.lenguageLink}>
+            <img src="/eua.png" alt="Português" className={styles.idioma} />
+          </Link>
+          {/* <img
             src="/idioma.svg"
             alt="Idioma"
             className={styles.idioma}
             onClick={() => setOpen(open === 2 ? 0 : 2)}
-          />
+          /> */}
           <img
             src="/pesquisa.png"
             alt="pesquisar"

@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./search.module.css";
 
 export const SearchOverlay = ({ setOpen, open, items, lang }) => {
-  const titulo = lang === "pt" ? "Estou buscando por..." : "I'm looking for";
+  const titulo = lang === "en" ? "I'm looking for" : "Estou Buscando Por...";
   function handleHamburguer() {
     setOpen(!open);
   }
@@ -36,7 +36,7 @@ export const SearchOverlay = ({ setOpen, open, items, lang }) => {
         <div className={styles.search_div}>
           <input
             type="text"
-            placeholder={lang === "pt" ? "BUSQUE" : "SEARCH"}
+            placeholder={lang === "en" ? "SEARCH" : "BUSQUE"}
             className={styles.input}
           />
           <img src="/search.svg" alt="search" className={styles.search_btn} />
