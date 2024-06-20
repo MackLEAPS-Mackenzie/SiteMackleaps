@@ -1,0 +1,10 @@
+.mainTable {
+  display: flex;
+  width: "100%";
+  box-shadow: 2px 2px 2px 1px rgba(0.2, 0.2, 0.2, 0.2);
+  background-color: #d1d1d1;
+}
+
+.editButton {
+  width: 30px;
+}

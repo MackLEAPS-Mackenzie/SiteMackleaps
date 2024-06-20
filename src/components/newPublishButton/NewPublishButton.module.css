@@ -1,0 +1,16 @@
+.publishButton {
+  border-radius: 30px;
+  border: none;
+  background-color: #e1001e;
+  color: #ffffff;
+  width: 190px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  height: 40px;
+}
+
+.publishButton:hover {
+  cursor: pointer;
+  scale: 105%;
+  transition: 300ms;
+}
