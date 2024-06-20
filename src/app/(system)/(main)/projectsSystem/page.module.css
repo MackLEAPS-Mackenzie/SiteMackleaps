@@ -4,14 +4,20 @@
   justify-content: center;
   align-items: center;
   background-image: url("/login-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #dfdfdf;
   gap: 60px;
 }
 
 .mainContent {
   display: flex;
   width: 85%;
+  margin-top: 50px;
   flex-direction: column;
   gap: 25px;
+  min-height: 100vh;
 }
 
 .h1 {
@@ -34,5 +40,5 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }

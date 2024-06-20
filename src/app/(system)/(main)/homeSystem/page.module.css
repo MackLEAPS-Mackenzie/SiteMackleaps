@@ -1,0 +1,39 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/login-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #dfdfdf;
+  gap: 60px;
+}
+
+.mainContent {
+  display: flex;
+  width: 85%;
+  min-height: 100vh;
+  margin-top: 50px;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.welcomeContent {
+  gap: 12px;
+}
+
+.welcome {
+  color: #000;
+  font-size: 45px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.welcomeUser {
+  color: #e1001e;
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

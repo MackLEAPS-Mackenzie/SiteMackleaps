@@ -8,19 +8,19 @@ export const HeaderSystem = () => {
     <div className={styles.mainContainer}>
       <div className={styles.nav}>
         <div className={styles.home}>
-          <Link href="" className={styles.link}>
+          <Link href="/homeSystem" className={styles.linkHome}>
             <img
               src="/logo-mackleaps.png"
               alt="Logo"
               className={styles.logoImage}
             />
           </Link>
-          <Link href="" className={styles.link}>
+          <Link href="/homeSystem" className={styles.linkHome}>
             Home
           </Link>
         </div>
         <div className={styles.navegacao}>
-          <Link href="" className={styles.link}>
+          <Link href="/publicacoes" className={styles.link}>
             Publicações
           </Link>
           <Link href="" className={styles.link}>
@@ -40,7 +40,7 @@ export const HeaderSystem = () => {
           </Link>
           <Link href="" className={styles.link}>
             <img
-              src="/config.svg"
+              src="/configSystem.svg"
               alt="Configurações"
               className={styles.icons}
             />

@@ -43,7 +43,7 @@ export default function Login() {
       return;
     }
     setLoading(false);
-    router.replace("/");
+    router.replace("/homeSystem");
   }
 
   return (

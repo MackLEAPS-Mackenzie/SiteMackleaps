@@ -1,21 +1,26 @@
 import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import styles from "./Table.module.css";
 import Button from "@mui/material/Button";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
+import styles from "./Table.module.css";
 
-// const theme = createTheme({
-//   components: {
-//     MuiDataGrid: {
-//       styleOverrides: {
-//         columnHeaders: {
-//           backgroundColor: "#E1001E",
-//           color: "#ffffff",
-//         },
-//       },
-//     },
-//   },
-// });
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#E1001E",
+    },
+    common: {
+      black: "#000",
+    },
+  },
+});
+
+const StyledDataGrid = styled(DataGrid)(({ theme }) => ({
+  "& .MuiDataGrid-columnHeaders": {
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.black,
+  },
+}));
 
 const columns = [
   { field: "id", headerName: "ID", width: 80, type: "string" },
@@ -105,21 +110,20 @@ const rows = [
 
 export const DataTable = () => {
   return (
-    //<ThemeProvider theme={theme}>
-    <div className={styles.mainTable}>
-      <DataGrid
-        editMode="row"
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 5 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-        //checkboxSelection
-      />
-    </div>
-    //</ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <div className={styles.mainTable}>
+        <StyledDataGrid
+          editMode="row"
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 5 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+        />
+      </div>
+    </ThemeProvider>
   );
 };
