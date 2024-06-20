@@ -24,7 +24,7 @@ export default async function Page({ params }) {
           />
           <h3
             className={styles.author_name}
-          >{`Escrito por ${noticia?.author} - ${noticia?.date}`}</h3>
+          >{`${noticia?.author} - ${noticia?.date}`}</h3>
         </section>
         <section className={styles.text_body}>
           <div

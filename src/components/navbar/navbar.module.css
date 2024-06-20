@@ -65,6 +65,7 @@
   opacity: 0.5;
 }
 
+
 .hamburguer {
   height: 30px;
   display: none;
@@ -132,6 +133,10 @@
   }
   .hamburguer {
     display: flex;
+  }
+  .search_button {
+    width: 30px;
+    height: 30px;
   }
 }
 

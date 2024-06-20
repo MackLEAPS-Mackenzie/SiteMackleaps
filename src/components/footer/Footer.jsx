@@ -103,7 +103,7 @@ export const Footer = ({ items, headers, lang }) => {
             target="_blank"
             className={styles.social_midias}
           >
-            Site Mackleaps
+            {headers.site}
           </Link>
           <Link
             href="https://lab-mackleaps.gitbook.io/residencia-de-software-macklaeps-upm-fci/"
@@ -124,21 +124,21 @@ export const Footer = ({ items, headers, lang }) => {
             target="_blank"
             className={styles.social_midias}
           >
-            Carrossel Informativo FCI
+            {headers.carrossel}
           </Link>
           <Link
             href="https://mackleaps.mackenzie.br/dashboard-estacao/"
             target="_blank"
             className={styles.social_midias}
           >
-            Estação meteorológica
+            {headers.estacao}
           </Link>
           <Link
             href="https://mackleaps.mackenzie.br/meteorologiaapi-docs/#"
             target="_blank"
             className={styles.social_midias}
           >
-            API - Estação
+            {headers.api}
           </Link>
         </div>
       </div>
@@ -150,11 +150,8 @@ export const Footer = ({ items, headers, lang }) => {
         >
           <img src="/map.png" alt="mapa" className={styles.image_address} />
         </Link>
-        <p className={styles.address}>
-          Endereço: R. da Consolação, 930 - Consolação, São Paulo - SP - (
-          Prédio 45 - Subsolo 2 )
-        </p>
-        <p className={styles.address}>Telefone: (11) 2766-7764</p>
+        <p className={styles.address}>{headers.endereco}</p>
+        <p className={styles.address}>{headers.telefone}</p>
       </div>
     </div>
   );

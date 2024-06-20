@@ -111,7 +111,30 @@ export const Navbar = ({ setOpen, open, items, lang }) => {
       </div>
       <div className={position ? styles.hamburguer_menu : styles.closed}>
         <div className={styles.icons_Hamburguer}>
-          <img src="/idioma.svg" alt="Idioma" className={styles.idioma} />
+          <Link
+            href="/pt-br"
+            className={
+              lang === "en" ? styles.lenguageLink : styles.lenguageLinkColor
+            }
+          >
+            <img
+              src="/brasil.png"
+              alt="Português"
+              className={lang === "en" ? styles.idioma : styles.idiomaColor}
+            />
+          </Link>
+          <Link
+            href="/en"
+            className={
+              lang != "en" ? styles.lenguageLink : styles.lenguageLinkColor
+            }
+          >
+            <img
+              src="/eua.png"
+              alt="Inglês"
+              className={lang != "en" ? styles.idioma : styles.idiomaColor}
+            />
+          </Link>
           <img
             src="/close.png"
             alt="fechar"

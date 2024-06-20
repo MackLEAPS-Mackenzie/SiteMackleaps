@@ -19,7 +19,7 @@ export const TeamCard = ({ img, name, role, link, date }) => {
                 alt="Currículo Lattes"
                 className={styles.icon}
               />
-              Currículo Lattes
+              Lattes
             </Link>
           ) : (
             ""

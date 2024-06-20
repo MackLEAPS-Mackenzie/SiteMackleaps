@@ -19,13 +19,15 @@ export const Header = ({ items, lang }) => {
           lang={lang}
         />
       ) : isOpen === 2 ? (
-        <LenguageOverlay setOpen={setIsOpen} open={isOpen} lang={lang}/>
+        <LenguageOverlay setOpen={setIsOpen} open={isOpen} lang={lang} />
       ) : (
         ""
       )}
       <div className={styles.header_img_div}>
         <img
-          src="/titulo-mackleaps.png"
+          src={
+            lang === "en" ? "/titulo-mackleapsEN.png" : "/titulo-mackleaps.png"
+          }
           alt="logo"
           className={styles.header_img}
         />

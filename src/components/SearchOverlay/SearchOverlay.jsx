@@ -24,13 +24,13 @@ export const SearchOverlay = ({ setOpen, open, items, lang }) => {
         </h1>
 
         <div className={styles.buttons_div}>
-          <Link href={lang === "en" ? "en/projects" : "/pt-br/projects"}>
+          <Link href={lang === "en" ? "en/projects" : "/projects"}>
             <button className={styles.button}>{items.projetos}</button>
           </Link>
-          <Link href={lang === "en" ? "en/research" : "pt-br/research"}>
+          <Link href={lang === "en" ? "en/research" : "/research"}>
             <button className={styles.button}>{items.pesquisa}</button>
           </Link>
-          <Link href={lang === "en" ? "en/news" : "/pt-br/news"}>
+          <Link href={lang === "en" ? "en/news" : "/news"}>
             <button className={styles.button}>{items.noticias}</button>
           </Link>
         </div>

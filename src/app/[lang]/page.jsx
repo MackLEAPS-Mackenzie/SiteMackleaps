@@ -18,7 +18,7 @@ export default async function Home({ params }) {
     <>
       <main className={styles.main}>
         <LabHome
-          json={latest_news}
+          json={lang.home.labSection.noticiasHome}
           textContent={lang.home.labSection}
           lang={params.lang}
         />

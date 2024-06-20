@@ -12,14 +12,34 @@
     "paginas": "páginas",
     "parcerias": "parcerias",
     "contato": "contatos",
-    "sistemas": "sistemas"
+    "sistemas": "sistemas",
+    "endereco": "Endereço: R. da Consolação, 930 - Consolação, São Paulo - SP - (Prédio 45 - Subsolo 2 )",
+    "telefone": "Telefone: (11) 2766-7764",
+    "site": "Site Mackleaps",
+    "carrossel": "Carrossel Informativo FCI",
+    "estacao": "Estação Meteorológica",
+    "api": "API - Estação"
   },
 
   "home": {
     "labSection": {
       "topTitle": "SAIBA MAIS SOBRE O NOSSO LABORATÓRIO",
       "topSubtitle": "MackLEAPS é Laboratório de Estudos em Ambiente de Produção de Software da Universidade Presbiteriana Mackenzie",
-      "saibaMais": "Saiba Mais"
+      "saibaMais": "Saiba Mais",
+      "noticiasHome": [
+        {
+          "img": "/code.jpeg",
+          "date": "20 Mai. 2024",
+          "title": "Inscrições encerradas - Iniciação Científica",
+          "description": ""
+        },
+        {
+          "img": "/code.jpeg",
+          "date": "20 Mai. 2024",
+          "title": "Inscrições encerradas - Iniciação Tecnológica",
+          "description": ""
+        }
+      ]
     },
     "projectSession": {
       "projetosTitle": "Projetos",
@@ -677,7 +697,7 @@
       {
         "id": "1",
         "img": "/code.jpeg",
-        "date": "20 Mai. 2024",
+        "date": "20 Mai, 2024",
         "author": "Administrador",
         "author_img": "/author.jpeg",
         "title": "Lançamento - Livros 2024",

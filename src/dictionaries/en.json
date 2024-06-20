@@ -13,14 +13,34 @@
     "paginas": "pages",
     "parcerias": "partnerships",
     "contato": "contacts",
-    "sistemas": "aplications"
+    "sistemas": "aplications",
+    "endereco": "Address: R. da Consolação, 930 - Consolação, São Paulo - SP - (Building 45 - Basement 2)",
+    "telefone": "Phone Number: (11) 2766-7764",
+    "site": "Mackleaps Website",
+    "carrossel": "FCI Information Carousel",
+    "estacao": "Weather Station",
+    "api": "API - Weather Station"
   },
 
   "home": {
     "labSection": {
       "topTitle": "Learn more about our laboratory",
       "topSubtitle": "MackLEAPS stands for Laboratory of Studies in Software Production Environment at Mackenzie Presbyterian University",
-      "saibaMais": "Find Out More"
+      "saibaMais": "Find Out More",
+      "noticiasHome": [
+        {
+          "img": "/code.jpeg",
+          "date": "May 20, 2024",
+          "title": "Registration closed - Scientific Initiation",
+          "description": ""
+        },
+        {
+          "img": "/code.jpeg",
+          "date": "May 20, 2024",
+          "title": "Registration closed - Technological Initiation",
+          "description": ""
+        }
+      ]
     },
     "projectSession": {
       "projetosTitle": "Projects",
@@ -30,19 +50,19 @@
         {
           "img": "/cloud.jpeg",
           "status": "In Progress",
-          "title": "Estação Meteorológica",
+          "title": "Weather Station",
           "description": "Application that communicates with a weather station and its sensors, collecting and manipulating real-time weather data."
         },
         {
           "img": "/minimalist_setup.jpeg",
           "status": "In Progress",
-          "title": "Site Mackleaps",
+          "title": "Mackleaps Website",
           "description": "Its scope includes disseminating research and projects related to technology and recruiting potential members and partners."
         },
         {
           "img": "/camera.jpeg",
           "status": "In Progress",
-          "title": "Contador de gente",
+          "title": "People Counter",
           "description": "It aims to count the number of people entering the buildings on the Higienópolis campus of Mackenzie University."
         },
         {
@@ -673,8 +693,8 @@
       {
         "id": "1",
         "img": "/code.jpeg",
-        "date": "20 Mai. 2024",
-        "author": "Administrador",
+        "date": "20 Mai, 2024",
+        "author": "Administrator",
         "author_img": "/author.jpeg",
         "title": "Book Release 2024",
         "description": "This news promotes the release of the latest books launched on May 27, 2024, authored by some professors from FCI.",
