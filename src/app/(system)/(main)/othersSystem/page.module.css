@@ -14,37 +14,31 @@
 .mainContent {
   display: flex;
   width: 85%;
-  min-height: 100vh;
-  z-index: 2;
   margin-top: 50px;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
+  min-height: 100vh;
 }
 
-.welcomeContent {
-  gap: 12px;
-}
-
-.welcome {
-  color: #000;
-  font-size: 45px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.welcomeUser {
+.h1 {
   color: #e1001e;
-  font-size: 45px;
+  font-size: 50px;
+  font-style: normal;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+  line-height: normal;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-.cards {
+.buttons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 23px;
 }
 
-.link {
-  text-decoration: none;
+.new {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 50px;
 }

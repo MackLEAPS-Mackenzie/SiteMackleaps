@@ -7,13 +7,21 @@ import styles from "./page.module.css";
 import { ButtonSystem } from "@/components/bottomSystem/ButtomSystem";
 import { NewPublishButton } from "@/components/newPublishButton/newPublishButton";
 import { DataTable } from "@/components/table/Table";
+import { getDbNews } from "@/services/db_queries";
 
-export default function Publicacoes() {
+export default async function Publicacoes() {
   const [selectedButton, setSelectedButton] = useState("Notícias");
 
   const handleButtonClick = (text) => {
     setSelectedButton(text);
   };
+
+  const dbNews = await getDbNews();
+
+  const rows = dbNews.map((news, index) => ({
+    id: index + 1,
+    ...news,
+  }));
 
   return (
     <div className={styles.mainContainer}>
@@ -41,7 +49,7 @@ export default function Publicacoes() {
               onClick={() => handleButtonClick("Pesquisas")}
             />
           </Link>
-          <Link href="">
+          <Link href="/othersSystem">
             <ButtonSystem
               text="Outros"
               isSelected={selectedButton === "Outros"}
@@ -49,7 +57,7 @@ export default function Publicacoes() {
             />
           </Link>
         </div>
-        <DataTable />
+        <DataTable rows={rows} />
         <div className={styles.new}>
           <NewPublishButton />
         </div>

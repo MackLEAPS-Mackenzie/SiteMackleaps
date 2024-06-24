@@ -8,18 +8,23 @@ export const HeaderSystem = () => {
     <div className={styles.mainContainer}>
       <div className={styles.nav}>
         <div className={styles.home}>
-          <Link href="/homeSystem" className={styles.linkHome}>
-            <img
-              src="/logo-mackleaps.png"
-              alt="Logo"
-              className={styles.logoImage}
-            />
-          </Link>
-          <Link href="/homeSystem" className={styles.linkHome}>
-            Home
+          <div className={styles.homeTemporary}>
+            <Link href="/homeSystem" className={styles.linkHome}>
+              <img
+                src="/logo-mackleaps.png"
+                alt="Logo"
+                className={styles.logoImage}
+              />
+            </Link>
+            <Link href="/homeSystem" className={styles.linkHome}>
+              Home
+            </Link>
+          </div>
+          <Link href="/publicacoes" className={styles.link}>
+            Publicações
           </Link>
         </div>
-        <div className={styles.navegacao}>
+        {/* <div className={styles.navegacao}>
           <Link href="/publicacoes" className={styles.link}>
             Publicações
           </Link>
@@ -29,7 +34,7 @@ export const HeaderSystem = () => {
           <Link href="" className={styles.link}>
             Colaboradores
           </Link>
-        </div>
+        </div> */}
         <div className={styles.settings}>
           <Link href="" className={styles.link}>
             <img

@@ -6,14 +6,22 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { ButtonSystem } from "@/components/bottomSystem/ButtomSystem";
 import { NewPublishButton } from "@/components/newPublishButton/newPublishButton";
-import { DataTable } from "@/components/table/Table";
+import { getDbProjects } from "@/services/db_queries";
+import { TableProjects } from "@/components/tableProjects/TableProjects";
 
-export default function ProjectsSystem() {
+export default async function ProjectsSystem() {
   const [selectedButton, setSelectedButton] = useState("Projetos");
 
   const handleButtonClick = (text) => {
     setSelectedButton(text);
   };
+
+  const db = await getDbProjects();
+
+  const rows = db.map((projects, index) => ({
+    id: index + 1,
+    ...projects,
+  }));
 
   return (
     <div className={styles.mainContainer}>
@@ -41,7 +49,7 @@ export default function ProjectsSystem() {
               onClick={() => handleButtonClick("Pesquisas")}
             />
           </Link>
-          <Link href="/">
+          <Link href="/othersSystem">
             <ButtonSystem
               text="Outros"
               isSelected={selectedButton === "Outros"}
@@ -49,7 +57,7 @@ export default function ProjectsSystem() {
             />
           </Link>
         </div>
-        <DataTable />
+        <TableProjects rows={rows} />
         <div className={styles.new}>
           <NewPublishButton />
         </div>
