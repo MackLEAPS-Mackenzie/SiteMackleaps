@@ -22,10 +22,6 @@
   gap: 20px;
 }
 
-/* .home:hover {
-  opacity: 0.7;
-} */
-
 .homeTemporary {
   display: flex;
   justify-content: center;
@@ -85,4 +81,44 @@
 
 .icons {
   width: 30px;
+}
+
+.iconLogout {
+  width: 36px;
+}
+
+@media (max-width: 710px) {
+  .linkHome {
+    font-size: 14px;
+  }
+  .link {
+    font-size: 14px;
+  }
+  .logoImage {
+    width: 52px;
+  }
+  .icons {
+    width: 27px;
+  }
+  .iconLogout {
+    width: 33px;
+  }
+}
+
+@media (max-width: 450px) {
+  .linkHome {
+    font-size: 12px;
+  }
+  .link {
+    font-size: 12px;
+  }
+  .logoImage {
+    width: 40px;
+  }
+  .icons {
+    width: 22px;
+  }
+  .iconLogout {
+    width: 31px;
+  }
 }

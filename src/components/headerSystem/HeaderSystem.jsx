@@ -4,6 +4,13 @@ import Link from "next/link";
 import React from "react";
 
 export const HeaderSystem = () => {
+  // NavBar Mobile
+  // const [position, setPosition] = React.useState(false);
+
+  // function handleHamburguer() {
+  //   setPosition(!position);
+  // }
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.nav}>
@@ -43,15 +50,19 @@ export const HeaderSystem = () => {
               className={styles.icons}
             />
           </Link>
-          <Link href="" className={styles.link}>
+          {/* <Link href="" className={styles.link}>
             <img
               src="/configSystem.svg"
               alt="Configurações"
               className={styles.icons}
             />
+          </Link> */}
+          <Link href="/login" className={styles.link}>
+            <img src="/logout.svg" alt="Sair" className={styles.iconLogout} />
           </Link>
         </div>
       </div>
+      <div className={styles.navMobile}></div>
     </div>
   );
 };

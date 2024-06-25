@@ -20,9 +20,9 @@ export default function HomeSystem() {
           <Link href="/researchSystem" className={styles.link}>
             <CardHomeSystem title="Pesquisas" />
           </Link>
-          <Link href="/othersSystem" className={styles.link}>
+          {/* <Link href="/othersSystem" className={styles.link}>
             <CardHomeSystem title="Outros" />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

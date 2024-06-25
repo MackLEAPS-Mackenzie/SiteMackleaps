@@ -15,3 +15,10 @@
   scale: 105%;
   transition: 300ms;
 }
+
+@media (max-width: 710px) {
+  .publishButton {
+    width: 150px;
+    font-size: 14px;
+  }
+}

@@ -32,3 +32,25 @@
   scale: 105%;
   transition: 300ms;
 }
+
+@media (max-width: 710px) {
+  .buttonSystem {
+    width: 110px;
+    font-size: 14px;
+  }
+  .buttonSystemRed {
+    width: 110px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .buttonSystem {
+    width: 150px;
+    font-size: 16px;
+  }
+  .buttonSystemRed {
+    width: 150px;
+    font-size: 16px;
+  }
+}

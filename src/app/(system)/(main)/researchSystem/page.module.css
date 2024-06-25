@@ -36,9 +36,46 @@
   gap: 23px;
 }
 
+.firstButtons {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.secondButtons {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
 .new {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 50px;
+}
+
+@media (max-width: 710px) {
+  .h1 {
+    font-size: 45px;
+  }
+  .buttons {
+    gap: 10px;
+  }
+  .firstButtons {
+    gap: 10px;
+  }
+  .secondButtons {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .h1 {
+    font-size: 35px;
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

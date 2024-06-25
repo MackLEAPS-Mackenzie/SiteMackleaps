@@ -48,3 +48,21 @@
 .link {
   text-decoration: none;
 }
+
+@media (max-width: 710px) {
+  .welcome {
+    font-size: 40px;
+  }
+  .welcomeUser {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .welcome {
+    font-size: 35px;
+  }
+  .welcomeUser {
+    font-size: 35px;
+  }
+}

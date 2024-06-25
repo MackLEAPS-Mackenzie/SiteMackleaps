@@ -27,7 +27,7 @@ const autosizeOptions = {
 // }));
 
 const columns = [
-  { field: "id", headerName: "ID", width: 80, type: "string" },
+  { field: "id", headerName: "ID", width: 90, type: "string" },
   { field: "title", headerName: "TÍTULO", width: 200, type: "string" },
   { field: "author", headerName: "AUTOR", width: 180, type: "string" },
   {
@@ -37,11 +37,11 @@ const columns = [
     type: "string",
     sortable: false,
   },
-  { field: "description", headerName: "DESCRIÇÃO", width: 400, type: "string" },
+  { field: "description", headerName: "DESCRIÇÃO", width: 300, type: "string" },
   {
     field: "editar",
     headerName: "EDITAR",
-    width: 70,
+    width: 100,
     filterable: false,
     sortable: false,
     renderCell: (params) => (

@@ -28,34 +28,38 @@ export default async function ProjectsSystem() {
       <div className={styles.mainContent}>
         <h1 className={styles.h1}>Publicações</h1>
         <div className={styles.buttons}>
-          <Link href="/publicacoes">
-            <ButtonSystem
-              text="Notícias"
-              isSelected={selectedButton === "Notícias"}
-              onClick={() => handleButtonClick("Notícias")}
-            />
-          </Link>
-          <Link href="/projectsSystem">
-            <ButtonSystem
-              text="Projetos"
-              isSelected={selectedButton === "Projetos"}
-              onClick={() => handleButtonClick("Projetos")}
-            />
-          </Link>
-          <Link href="/researchSystem">
-            <ButtonSystem
-              text="Pesquisas"
-              isSelected={selectedButton === "Pesquisas"}
-              onClick={() => handleButtonClick("Pesquisas")}
-            />
-          </Link>
-          <Link href="/othersSystem">
-            <ButtonSystem
-              text="Outros"
-              isSelected={selectedButton === "Outros"}
-              onClick={() => handleButtonClick("Outros")}
-            />
-          </Link>
+          <div className={styles.firstButtons}>
+            <Link href="/publicacoes">
+              <ButtonSystem
+                text="Notícias"
+                isSelected={selectedButton === "Notícias"}
+                onClick={() => handleButtonClick("Notícias")}
+              />
+            </Link>
+            <Link href="/projectsSystem">
+              <ButtonSystem
+                text="Projetos"
+                isSelected={selectedButton === "Projetos"}
+                onClick={() => handleButtonClick("Projetos")}
+              />
+            </Link>
+          </div>
+          <div className={styles.secondButtons}>
+            <Link href="/researchSystem">
+              <ButtonSystem
+                text="Pesquisas"
+                isSelected={selectedButton === "Pesquisas"}
+                onClick={() => handleButtonClick("Pesquisas")}
+              />
+            </Link>
+            {/* <Link href="/othersSystem">
+              <ButtonSystem
+                text="Outros"
+                isSelected={selectedButton === "Outros"}
+                onClick={() => handleButtonClick("Outros")}
+              />
+            </Link> */}
+          </div>
         </div>
         <TableProjects rows={rows} />
         <div className={styles.new}>
