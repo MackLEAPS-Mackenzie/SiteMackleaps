@@ -1,0 +1,35 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.button {
+  display: flex;
+  background-color: #e1001e;
+  font-size: 13px;
+  width: 220px;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.images {
+  position: absolute;
+  right: -30px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.mainContainer:hover {
+  scale: 102%;
+  transition: 300ms;
+}

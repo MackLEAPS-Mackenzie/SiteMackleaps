@@ -4,7 +4,7 @@ import { useState } from "react";
 import React from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { ButtonSystem } from "@/components/bottomSystem/ButtomSystem";
+import { ButtonSystem } from "@/components/buttomSystem/ButtomSystem";
 import { NewPublishButton } from "@/components/newPublishButton/newPublishButton";
 import { DataTable } from "@/components/table/Table";
 import { getDbNews } from "@/services/db_queries";
@@ -63,7 +63,9 @@ export default async function Publicacoes() {
         </div>
         <DataTable rows={rows} />
         <div className={styles.new}>
-          <NewPublishButton />
+          <Link href="/addNews" className={styles.link}>
+            <NewPublishButton />
+          </Link>
         </div>
       </div>
     </div>

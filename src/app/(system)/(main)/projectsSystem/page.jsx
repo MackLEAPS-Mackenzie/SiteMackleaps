@@ -4,7 +4,7 @@ import { useState } from "react";
 import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { ButtonSystem } from "@/components/bottomSystem/ButtomSystem";
+import { ButtonSystem } from "@/components/buttomSystem/ButtomSystem";
 import { NewPublishButton } from "@/components/newPublishButton/newPublishButton";
 import { getDbProjects } from "@/services/db_queries";
 import { TableProjects } from "@/components/tableProjects/TableProjects";
@@ -63,7 +63,9 @@ export default async function ProjectsSystem() {
         </div>
         <TableProjects rows={rows} />
         <div className={styles.new}>
-          <NewPublishButton />
+          <Link href="/addNews" className={styles.link}>
+            <NewPublishButton />
+          </Link>
         </div>
       </div>
     </div>
