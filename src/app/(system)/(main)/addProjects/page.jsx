@@ -1,32 +1,22 @@
 "use client";
 
+import styles from "./page.module.css";
 import { useState } from "react";
 import React from "react";
-import styles from "./page.module.css";
 import Link from "next/link";
 import { ButtonSystem } from "@/components/buttomSystem/ButtomSystem";
-import { NewPublishButton } from "@/components/newPublishButton/newPublishButton";
-import { getDbProjects } from "@/services/db_queries";
-import { TableProjects } from "@/components/tableProjects/TableProjects";
+import { AddProjectsCard } from "@/components/addProjectsCard/AddProjectsCard";
 
-export default async function ProjectsSystem() {
-  const [selectedButton, setSelectedButton] = useState("Pesquisas");
+export default function AddNews() {
+  const [selectedButton, setSelectedButton] = useState("Projetos");
 
   const handleButtonClick = (text) => {
     setSelectedButton(text);
   };
-
-  const db = await getDbProjects();
-
-  const rows = db.map((projects, index) => ({
-    id: index + 1,
-    ...projects,
-  }));
-
   return (
     <div className={styles.mainContainer}>
       <div className={styles.mainContent}>
-        <h1 className={styles.h1}>Publicações</h1>
+        <h1 className={styles.title}>Publicações</h1>
         <div className={styles.buttons}>
           <div className={styles.firstButtons}>
             <Link href="/publicacoes">
@@ -61,12 +51,7 @@ export default async function ProjectsSystem() {
             </Link> */}
           </div>
         </div>
-        <TableProjects rows={rows} />
-        <div className={styles.new}>
-          <Link href="/addResearch" className={styles.link}>
-            <NewPublishButton />
-          </Link>
-        </div>
+        <AddProjectsCard />
       </div>
     </div>
   );

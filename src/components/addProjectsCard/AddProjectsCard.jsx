@@ -1,8 +1,8 @@
+import styles from "./AddProjectsCard.module.css";
 import { ButtonDeleteSystem } from "../buttonDeleteSystem/ButtonDeleteSystem";
 import { ButtonWithImage } from "../buttonWithImage/ButtonWithImage";
-import styles from "./AddNewsCard.module.css";
 
-export const AddNewsCard = () => {
+export const AddProjectsCard = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.mainContent}>
@@ -16,6 +16,17 @@ export const AddNewsCard = () => {
               id="titulo"
               name="titulo"
               className={styles.input}
+            />
+          </div>
+          <div className={styles.statusContainer}>
+            <label htmlFor="Status" className={styles.label}>
+              Status:
+            </label>
+            <input
+              type="text"
+              id="status"
+              name="status"
+              className={styles.inputStatus}
             />
           </div>
         </div>

@@ -63,7 +63,7 @@ export default async function ProjectsSystem() {
         </div>
         <TableProjects rows={rows} />
         <div className={styles.new}>
-          <Link href="/addNews" className={styles.link}>
+          <Link href="/addProjects" className={styles.link}>
             <NewPublishButton />
           </Link>
         </div>

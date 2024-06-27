@@ -33,3 +33,28 @@
   scale: 102%;
   transition: 300ms;
 }
+
+@media (max-width: 990px) {
+  .button {
+    width: 170px;
+  }
+  .images {
+    width: 45px;
+  }
+}
+
+@media (max-width: 550px) {
+  .button {
+    width: 118px;
+    height: 40px;
+  }
+  .images {
+    width: 50px;
+  }
+}
+
+@media (max-width: 370px) {
+  .button {
+    width: 180px;
+  }
+}

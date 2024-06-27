@@ -46,7 +46,7 @@ const columns = [
     sortable: false,
     renderCell: (params) => (
       <Button>
-        <img src="./edit.svg" alt="Editar" className={styles.editButton} />
+        <img src="./editNew.svg" alt="Editar" className={styles.editButton} />
       </Button>
     ),
   },
